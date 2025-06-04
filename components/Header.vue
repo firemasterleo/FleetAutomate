@@ -266,8 +266,8 @@ onMounted(() => {
       }
                 .logo {
                   // border: solid;
-            width: auto;
-            height: 2rem;
+            width: 10rem;
+            height: auto;
 
             img {
               width: 100%;
