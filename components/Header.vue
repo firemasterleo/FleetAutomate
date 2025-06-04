@@ -265,13 +265,17 @@ onMounted(() => {
               }
       }
                 .logo {
-                  // border: solid;
+                  // border: solid red;
             width: 10rem;
             height: auto;
 
+
             img {
               width: 100%;
-              height: 100%;
+              height: auto;
+              // border: solid blue;
+              object-fit: cover;
+
             }
           }
 
