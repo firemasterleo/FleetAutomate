@@ -122,7 +122,7 @@ const formatDateWithSuffix = (date) => {
 const getLastSyncTime = async () => {
   try {
     const { data, error } = await supabase
-      .from('ddhaul_sync_log')  // Your table name
+      .from('demo_sync_log')  // Your table name
       .select('last_synced_at')
       .order('last_synced_at', { ascending: false })
       .limit(1);  // Get the most recent sync record
@@ -152,7 +152,7 @@ const triggerFullSync = async () => {
     button.disabled = true;
     button.textContent = 'Syncing...';
 
-    const response = await fetch('https://automation-backend-9n51.onrender.com/api/full-sync', {
+    const response = await fetch('https://automation-backend-9n51.onrender.com/api/full-sync-demo', {
       method: 'GET', // You can change this to 'POST' if your API uses POST for this route
     });
 
@@ -187,7 +187,7 @@ const fetchVehicleData = async () => {
 
   try {
     const { data, error: fetchError } = await supabase
-      .from('vehicle_docs_review')
+      .from('demo_vehicle_docs_review')
       .select('*')
       .order('review_date', { ascending: false });
 
